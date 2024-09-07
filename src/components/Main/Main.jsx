@@ -39,9 +39,9 @@ export default function Main() {
         <input type="submit" />
       </form>
 
-      <div id="resultBox">
+      {/* <div id="resultBox">
         <h1>testing 123</h1>
-      </div>
+      </div> */}
     </>
   );
 }
