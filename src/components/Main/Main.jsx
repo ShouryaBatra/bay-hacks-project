@@ -3,23 +3,31 @@ import "./Main.css";
 export default function Main() {
   return (
     <>
-      <h1>Your Tutoring Experience: Welcome to [Name]! </h1>
+      <h1>Your Tutoring Experience: Welcome to Luminaris! </h1>
       <h2> Your AI tutor, anytime, anywhere.</h2>
 
       {/* FORM HTML GOES HERE */}
       <form>
         <select name="framework">
-          <option value="">I'm stuck on...</option>
+          <option value="">I want to learn</option>
           <option value="math">Math</option>
           <option value="science">Science</option>x
           <option value="computerScience">Computer Science</option>
-          <option value="svelte">idk</option>
+          <option value="svelte">Social Studies</option>
         </select>
         <div>
-          <input name="subModule" placeholder="Sub-Module" required />
+          <input
+            name="subModule"
+            placeholder="Sub-Module (e.g Rev War)"
+            required
+          />
         </div>
         <div>
-          <input name="duration" placeholder="Duration of Lesson" required />
+          <input
+            name="duration"
+            placeholder="Duration of Lesson (e.g 3 Weeks)"
+            required
+          />
         </div>
         <select>
           <option value="">Grade</option>
