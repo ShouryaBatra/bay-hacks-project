@@ -8,10 +8,25 @@ import { Results } from "./components/Results/Results";
 function App() {
   // const [count, setCount] = useState(0)
 
+  const [subject, setSubject] = useState();
+  const [subModule, setSubModule] = useState();
+  const [duration, setDuration] = useState();
+  const [grade, setGrade] = useState();
+
   return (
     <>
-      <Main />
-      <Results />
+      <Main
+        setSubject={setSubject}
+        setSubModule={setSubModule}
+        setDuration={setDuration}
+        setGrade={setGrade}
+      />
+      <Results
+        subject={subject}
+        subModule={subModule}
+        duration={duration}
+        grade={grade}
+      />
     </>
   );
 }

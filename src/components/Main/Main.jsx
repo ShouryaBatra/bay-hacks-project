@@ -1,28 +1,50 @@
 import "./Main.css";
 import * as React from "react";
+import { useState } from "react";
 
-export default function Main() {
+export default function Main({
+  setSubject,
+  setSubModule,
+  setDuration,
+  setGrade,
+}) {
   return (
     <>
-      <h1>Your Tutoring Experience: Welcome to [Name]! </h1>
+      <h1>Your Tutoring Experience: Welcome to Luminaris! </h1>
       <h2> Your AI tutor, anytime, anywhere.</h2>
 
       {/* FORM HTML GOES HERE */}
+
       <form>
-        <select name="framework">
-          <option value="">I'm stuck on...</option>
+        <select
+          name="subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+        >
+          <option value="">I want to learn...</option>
           <option value="math">Math</option>
-          <option value="science">Science</option>x
+          <option value="science">Science</option>
           <option value="computerScience">Computer Science</option>
-          <option value="svelte">idk</option>
+          <option value="english">English</option>
         </select>
         <div>
-          <input name="subModule" placeholder="Sub-Module" required />
+          <input
+            name="subModule"
+            placeholder="Sub-Module"
+            value={subModule}
+            onChange={(e) => setSubModule(e.target.value)}
+          />
         </div>
         <div>
-          <input name="duration" placeholder="Duration of Lesson" required />
+          <input
+            name="duration"
+            placeholder="Duration of Lesson (e.g 3 Days/1 Week)"
+            value={duration}
+            onChange={(e) => setDuration(e.target.value)}
+            required
+          />
         </div>
-        <select>
+        <select value={grade} onChange={(e) => setGrade(e.target.value)}>
           <option value="">Grade</option>
           <option value="">1st</option>
           <option value="">2nd</option>
